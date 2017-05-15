@@ -14,20 +14,20 @@
 - git push origin master    __//Repositório local ---> Repositório remoto (envia as atualizações)__
 - git pull origin master    __//Repositório remoto --> Repositório local (traz as atualizações)__
 
-
+---
 
 ### Como criar repositório com material já existente
 - cria repositório no github/bitbucket
 - git remote add origin endereço
 - git push -u origin master
 
-
+---
 
 ### Como configurar identificação
 - git config --global user.email "email"
 - git config --global user.name "Nome"
 
-
+---
 
 ### Como colaborar
 - fork
