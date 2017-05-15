@@ -16,10 +16,11 @@
 
 ---
 
-### Como criar repositório com material já existente
-- cria repositório no github/bitbucket
-- git remote add origin endereço
-- git push -u origin master
+### Como referenciar repositório local ao remoto
+- criar repositório remoto no github/bitbucket
+- criar repositório local
+- git remote add origin endereço_do_remoto
+>- git push -u origin master
 
 ---
 
@@ -31,5 +32,5 @@
 
 ### Como colaborar
 - fork
-- realiza as edições: clone, add, commit, push...
+- realizar as edições: clone, add, commit, push...
 - new pull request
