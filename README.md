@@ -1,11 +1,12 @@
 # lembrete
 ### Comandos
 
-- git init    __//cria repositorio__
+- git init   ` cria repositorio`
 
 - git status
 
-- git add .   __//Working Directory --> Index (atualiza área temporária)__
+- git add .   
+> Working Directory --> Index (atualiza área temporária)
 - git commit -m "mensagem"    __//Index --> HEAD (atualiza repositório local)__
 - git commit -a -m "mensagem"   __//add + commit__
 
