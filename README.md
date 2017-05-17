@@ -1,16 +1,22 @@
 # lembrete
 ### Comandos
 
-- git init   ` cria repositorio`
+- git init
+  > cria repositório
 
 - git status
 
-- git add .   
-> Working Directory --> Index (atualiza área temporária)
-- git commit -m "mensagem"    __//Index --> HEAD (atualiza repositório local)__
-- git commit -a -m "mensagem"   __//add + commit__
+- git add .
+  > adiciona todos os arquivos atualizados na área temporária (Working Directory --> Index)
+  
+- git commit -m "'mensagem de descrição'"
+  > atualiza repositório local (Index --> HEAD)
+  
+- git commit -a -m "mensagem de descrição"
+  > add + commit
 
-- git clone endereço    __//clona repositório remoto__
+- git clone 'endereço'
+  > clona repositório do endereço informado
 
 - git push origin master    __//Repositório local ---> Repositório remoto (envia as atualizações)__
 - git pull origin master    __//Repositório remoto --> Repositório local (traz as atualizações)__
