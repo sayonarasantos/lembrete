@@ -52,8 +52,8 @@
 
 ### Como colaborar
 
-- Criar uma cópia do projeto no meu git com *fork*
+- Criar uma cópia do projeto principal no meu git, clicando em `fork`
 
 - realizar as modificações: clone, add, commit, push...
 
-- solicitar a adição das modificações no projeto principal: *new pull request*
+- solicitar a adição das modificações no projeto principal, clicando em `new pull request`
