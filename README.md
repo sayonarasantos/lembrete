@@ -1,59 +1,66 @@
-# lembrete
+# Lembrete de comandos do Git
 
-### Áreas
+## Alguns conceitos
 
-- Working Directory: contém os arquivos correntes, os arquivos manuseados
-- Index: área temporária, onde preperam-se os arquivos que irão compor o próximo commit
-- Head: aponta para a versão mais atualizada do branch, a que possui o último commit
+- Working Directory: área que contém os arquivos correntes, os arquivos manuseados
+- Staging Index: área temporária, onde preperam-se os arquivos que irão compor o próximo commit
+- Commit history: área que possui o histórico de commits
+- Head: ponteiro que indica a versão mais atualizada do branch, a que possui o último commit. Um repositório pode possuir vários branches - ramificações de um projeto - e o Head aponta para versão atual do branch corrente.
 
-Obs.: Um repositório pode possuir vários branches, ramificações de um projeto, e o Head aponta para versão atual do branch corrente.
 
 ---
 
-### Comandos mais utilizados
+## Alguns comandos
 
-- git clone endereço_do_repositório
-  > clona repositório do endereço informado
+- git add arquivo_modificado
+  > adiciona o arquivo modificado na área de seleção (Working Directory --> Staging Index)
   
+- git add .
+  > adiciona todos os arquivos modificados na área de seleção (Working Directory --> Staging Index)
+
 - git add remote origin endereço_do_repositório
   > cria uma conexão (referência) com um repositório remoto
 
-- git init
-  > inicializa repositório
+- git clone endereço_do_repositório
+  > clona repositório do endereço informado
 
-- git status
-  > verifica o estado dos arquivos 
-
-- git add arquivo_modificado
-  > adiciona o arquivo modificado na área de seleção (Working Directory --> Index)
-  
-- git add .
-  > adiciona todos os arquivos modificados na área de seleção (Working Directory --> Index)
-  
 - git commit -m "mensagem de descrição"
-  > atualiza o branch (Index --> HEAD)
+  > atualiza o branch (Staging Index --> Head)
 
-- git push origin master
-  > envia as atualizações do repositório master ao repositório remoto origin (Repositório master --> Repositório origin)
-  
-- git pull origin master
-  > traz as atualizações do repositório remoto origin (Repositório origin --> Repositório master)
-  
 - git checkout -b novo_branch
-  > cria um novo branch do projeto
+  > cria um novo branch do projeto a partir do branch corrente
 
 - git checkout branch_X
   > aponta para o branch em que se quer trabalhar, branch_X
 
-- git merge branch_Y
-  > traz as atualizações de outro branch (branch_Y) para o branch ativo
-  
 - git diff branch_Y branch_X
   > mostra as diferenças entre os branches
 
+- git init
+  > inicializa repositório
+
+- git merge branch_Y
+  > traz as atualizações de outro branch (branch_Y) para o branch corrente
+
+- git pull origin master
+  > traz as atualizações do repositório remoto origin (Repositório origin --> Repositório master)
+
+- git push origin master
+  > envia as atualizações do repositório master ao repositório remoto origin (Repositório master --> Repositório origin)
+
+- git reset <modo>
+  > Modos:
+  > * --soft: redefine o Head para o último commit (ou algum outro commit especificado), sem alterar o Staging Index e o Working Directory. (Altera o Head)
+  > * --mixed (padrão): redefine o HEAD para o último commit (ou algum outro commit especificado) e faz com que o Staging Index fiquei no mesmo estado do commit para o qual o HEAD foi movido, porém não altera o Working Directory. (Altera o Head e o Staging Index)
+  > * --hard: redefine o HEAD para o último commit (ou algum outro commit especificado) e faz com que o Staging Index e o Working Directory fiquem no mesmo estado do commit para o qual o HEAD foi movido. (Altera o Head, o Staging Index e o Working Directory)
+ 
+- git status
+  > verifica o estado dos arquivos 
+
+
 ---
 
-### Configuração global - identificação
+## Configuração global - identificação
 
 - Email do github:
 ```
@@ -65,9 +72,10 @@ git config --global user.email email_do_usuário
 git config --global user.name "Nome do usuário"
 ```
 
+
 ---
 
-### Como clonar um repositório remoto vazio
+## Como clonar um repositório remoto vazio
 
 ```
   git clone endereço_do_repositorio_remoto
@@ -78,9 +86,10 @@ git config --global user.name "Nome do usuário"
   git push -u origin
 ```
 
+
 ---
 
-### Como criar uma conexão remota para seu repositório local
+## Como criar uma conexão remota para seu repositório local
 
 - Crie um repositório remoto no github/bitbucket sem arquivo (sem readme)
 
@@ -90,9 +99,10 @@ git remote add aplido_da_referencia endereço_do_repositório_remoto
 ```
 - Envie os arquivos do repositório local ao remoto (add, commit, push)
 
+
 ---
 
-### Como colaborar
+## Como colaborar
 
 - Crie uma cópia do projeto principal no meu git, clicando em `fork`
 
